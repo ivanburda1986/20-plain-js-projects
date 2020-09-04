@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 :root {
   --modal-duration: 1s;
@@ -11,8 +11,14 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
+  transition: transform 0.3s ease;
+}
+
+body.show-nav {
+  /* Width of the nav */
+  transform: translateX(200px);
 }
 
 nav {
@@ -31,7 +37,6 @@ nav {
 nav .logo {
   padding: 30px 0;
   text-align: center;
-
 }
 
 nav .logo img {
@@ -71,7 +76,6 @@ header {
   position: relative;
   padding: 40px 15px;
   text-align: center;
-
 }
 
 header h1 {
@@ -83,7 +87,7 @@ header p {
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   background-color: var(--secondary-color);
   border: 0;
   border-radius: 5px;
@@ -125,6 +129,10 @@ button:focus {
   bottom: 0;
 }
 
+.modal-container.show-modal {
+  display: block;
+}
+
 .modal {
   background-color: #fff;
   border-radius: 5px;
@@ -136,13 +144,14 @@ button:focus {
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 
 .modal-header {
   background: var(--primary-color);
   color: #fff;
   padding: 15px;
-
 }
 
 .modal-header h3 {
@@ -156,7 +165,6 @@ button:focus {
 
 .modal-form div {
   margin: 15px 0;
-
 }
 
 .modal-form label {
@@ -175,4 +183,13 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
