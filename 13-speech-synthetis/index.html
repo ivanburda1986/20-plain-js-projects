@@ -7,7 +7,20 @@
   <title>Speech synthetis</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Speech text reader</h1>
+    <button id="toggle" class="btn btn-toggle">
+      Toggle Text Box
+    </button>
+    <div id="text-box" class="text-box">
+      <div id="close" class="close">x</div>
+      <h3>Choose voice</h3>
+      <select id="voices"></select>
+      <textarea id="text"></textarea>
+      <button class="btn" id="read">Read text</button>
+    </div>
+    <main></main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
