@@ -92,7 +92,7 @@ ul.songs {
   padding: 0;
 }
 
-ul.song li {
+ul.songs li {
   display: flex;
   align-items: center;
   justify-content: space-between;
