@@ -52,7 +52,7 @@ h1 {
 }
 
 .countdown {
-  display: flex;
+  display: none;
   flex-direction: row;
   transform: scale(2);
 }
