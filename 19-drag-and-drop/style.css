@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 :root {
   --border-color: #e3e5e4;
@@ -18,7 +18,7 @@ body {
   justify-content: flex-start;
   height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .draggable-list {
@@ -26,7 +26,6 @@ body {
   color: var(--text-color);
   padding: 0;
   list-style-type: none;
-
 }
 
 .draggable-list li {
@@ -57,11 +56,11 @@ body {
   margin: 0 20px 0 0;
 }
 
-.draggable-list.right .person-name {
+.draggable-list li.right .person-name {
   color: #3ae374;
 }
 
-.draggable-list.wrong .person-name {
+.draggable-list li.wrong .person-name {
   color: #ff3a3a;
 }
 
