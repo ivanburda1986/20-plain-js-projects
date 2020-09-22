@@ -7,7 +7,6 @@ const randomNum = getRandomNumber();
 function getRandomNumber() {
   return Math.floor(Math.random() * 100) + 1;
 }
-console.log(randomNum);
 
 //Initialize the speech recognition
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -19,7 +18,7 @@ recognition.start();
 
 //Capture user speech
 function onSpeak(e) {
-  const message = e.results[0][0].transcript;
+  const msg = e.results[0][0].transcript;
   writeMessage(msg);
   checkNumber(msg);
 }
