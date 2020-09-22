@@ -19,6 +19,7 @@ recognition.start();
 //Capture user speech
 function onSpeak(e) {
   const msg = e.results[0][0].transcript;
+  alert(msg);
   writeMessage(msg);
   checkNumber(msg);
 }
