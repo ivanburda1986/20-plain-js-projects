@@ -19,7 +19,7 @@ recognition.start();
 //Capture user speech
 function onSpeak(e) {
   const msg = e.results[0][0].transcript;
-  alert(msg);
+  console.log(e);
   writeMessage(msg);
   checkNumber(msg);
 }
@@ -34,6 +34,7 @@ function writeMessage(msg) {
 
 function checkNumber(msg) {
   const num = +msg;
+  console.log(num);
   //Check whether the message is a valid number
   if (Number.isNaN(num)) {
     msgEl.innerHTML += "<div>That is not a valid number</div>";
@@ -63,7 +64,7 @@ function checkNumber(msg) {
 recognition.addEventListener("result", onSpeak);
 
 //End speach recognition service
-recognition.addEventListener("end", () => recignition.start());
+recognition.addEventListener("end", () => recognition.start());
 
 //Start playing again
 document.body.addEventListener("click", (e) => {
